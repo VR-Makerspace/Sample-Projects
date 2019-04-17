@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ryan's Portfolio</title>
+      <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+      <script src="https://unpkg.com/aframe-animation-component@%5E3.2.x/dist/aframe-animation-component.min.js"></script>
+   </head>
+  <body>
+    <a-scene school-playground>
+
+
+      <!-- Asset Management System -->
+      <a-assets>
+	        <image id="item1" src="assets/visual/ryan-portfolio/item1.jpg"></image>
+	        <image id="item2" src="assets/visual/ryan-portfolio/item2.jpg"></image>
+	        <image id="item3" src="assets/visual/ryan-portfolio/item3.jpg"></image>
+	        <image id="item4" src="assets/visual/ryan-portfolio/item4.jpg"></image>
+	        <image id="item5" src="assets/visual/ryan-portfolio/item5.jpg"></image>
+		<video id="item6" autoplay loop="true" src="assets/visual/ryan-portfolio/item6.mp4"></video>		
+	        <image id="item7" src="assets/visual/ryan-portfolio/item7.jpg"></image>
+      </a-assets>
+
+      <!-- Scene -->
+      <a-camera position="0 1 0">
+        <a-cursor id="cursor"></a-cursor>
+      </a-camera>
+
+      <a-sky color="#4CC3D9"></a-sky>
+     <a-plane position="0 0 -4" rotation="-90 0 0" height="100" width="100" color="#7BC8A4"></a-plane>
+
+
+	<a-entity
+		geometry="primitive: plane;
+		width: 4; height: auto"
+  		material="color: black"
+  		text="value:
+		Hello! My name is Ryan and this is my VR Portfolio.
+		
+		This portfolio showcases 4 professional photographic and videographic items that have produced across my undergraduate candidature in the National University of Singapore. As a proud alumnus of the Department of Communications and New Media, I am forever indebted to the teachers that have taught me here, especially to Dr. Lu Weiquan.";
+		position="0 2 -5"
+		rotation="0 0 0">
+
+		<a-entity
+			geometry="primitive: triangle; vertexA: -0.5 0.5 0; vertexB: -0.5 -0.5 0; vertexC: 0.5 0 0;"	
+			material="color: black"
+			position="3.25 0 0"
+			rotation="0 0 0">
+		</a-entity>
+
+		<a-entity
+			geometry="primitive: triangle; vertexA: -0.5 0.5 0; vertexB: -0.5 -0.5 0; vertexC: 0.5 0 0;"	
+			material="color: black"
+			position="-3.5 0 0"
+			rotation="0 0 -180">
+		</a-entity>
+	</a-entity>
+
+	<a-image src="#item2" width="3" height="2" position="-5 2 0" align="center" rotation="0 90 0">
+		<a-entity
+ 			geometry="primitive: plane; 
+			width: 1; height: auto"
+			material="color: black"
+			text="value: Title: Dog
+			This is a profesionally taken photo of my dog! It is good.;"
+			position="-2.2 0 0">
+		</a-entity>
+
+	      <a-entity id="lightSphere"
+		geometry="primitive: sphere; radius: 0.075"
+		material="shader: flat"
+		light="type: point; color: #FFF"
+		position="0 1.2 0.1">
+		</a-entity>	
+	</a-image>	
+
+	<a-image src="#item4" width="3" height="2" position="0 2 5" align="center" rotation="0 180 0">
+		<a-entity
+ 			geometry="primitive: plane; 
+			width: 1; height: auto"
+			material="color: black"
+			text="value: Title: Bear
+			This is a profesionally taken photo of a bear! It is good.;"
+			position="-2.2 0 0">
+		</a-entity>
+
+	      <a-entity id="lightSphere"
+		geometry="primitive: sphere; radius: 0.075"
+		material="shader: flat"
+		light="type: point; color: #FFF"
+		position="0 1.2 0.1">
+		</a-entity>	
+	</a-image>	
+
+	<a-image src="#item6" width="3" height="2" position="5 2 0" align="center" rotation="0 -90 0">
+		<a-entity
+ 			geometry="primitive: plane; 
+			width: 1; height: auto"
+			material="color: black"
+			text="value: Title: Wolves
+			This is a profesionally taken video of wolves! It is good.;"
+			position="-2.2 0 0">
+		</a-entity>
+
+	      <a-entity id="lightSphere"
+		geometry="primitive: sphere; radius: 0.075"
+		material="shader: flat"
+		light="type: point; color: #FFF"
+		position="0 1.2 0.1">
+		</a-entity>	
+	</a-image>	
+
+	
+    </a-scene>
+  </body>
+</html>
+
+	
+	<a-image src="#item1" width="3" height="2" position="0 2 -5" align="center">
+		<a-entity
+ 			geometry="primitive: plane; 
+			width: 1; height: auto"
+			material="color: grey"
+			text="value: Title: Cat
+			This is a profesionally photo taken of my cat! It is good.;"
+			position="-2.2 0 0">
+		</a-entity>
+
+	      <a-entity id="lightSphere"
+		geometry="primitive: sphere; radius: 0.075"
+		material="shader: flat"
+		light="type: point; color: #FFF"
+		position="0 1.2 0.1">
+		</a-entity>	
+	</a-image>	
+
+
+      <!-- #0 Documentation
+      https://aframe.io/docs/0.8.0/introduction/
+      https://aframe.io/aframe-school/
+      https://aframe.io/aframe-registry/
+      https://aframe.io/docs/0.8.0/introduction/javascript-events-dom-apis.html
+      -->
+
+      <!-- #2 Relative Position
+      <a-cone position="-3 1 0" rotation="180 0 0" height="0.5" radius-bottom="0.1" color="#FFAAAA">
+        <a-sphere position="0 -0.25 0" radius="0.1" color="#EF2D5E"></a-sphere>
+        <a-sphere position="0 -0.35 0" radius="0.1" color="#EFFF5E"></a-sphere>
+        <a-sphere position="0 -0.45 0" radius="0.1" color="#EF2DFF"></a-sphere>
+      </a-cone>
+      src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fcone.jpg?1490308535937"
+      -->
+
+      <!-- #3 Adding Text
+      <a-text value="top" align=center height="100" width="100" position="0 10 -2" rotation="90 0 0" color="#000000"></a-text>
+      <a-text value="bottom" align=center height="100" width="100" position="0 -10 -2" rotation="-90 0 0" color="#000000"></a-text>
+      -->
+
+      <!-- #4 Adding Image/Video
+      <a-assets>
+        <video id="marvel" autoplay loop="true" src="assets/marvel.mp4"></video>
+        <image id="marvellogo" src="assets/marvel.png"></image>
+      </a-assets>
+
+      <a-video src="#marvel" width="32" height="18" position="0 12 -20" align="center"></a-video>
+      <a-image src="#marvellogo" width="32" height="12" position="0 30 -20" align="center"></a-video>
+      -->
+
+      <!-- #5 Other Assets
+      <a-assets>
+        <a-asset-item id="house" src="assets/house.obj"></a-asset-item>
+      </a-assets>
+
+      <a-entity position="10 0.5 0" scale="0.02 0.02 0.02" obj-model="obj: #house" material="color: #FFAAAA"></a-entity>
+      -->
+
+      <!-- #6 Textures
+      <a-sky src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fsechelt.jpg?1490307995926" radius="30"></a-sky>
+      <a-plane src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ffloor.jpg?1490307896453" rotation="-90 0 0" height="100" width="100"></a-plane>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/bricks/brick_bump.jpg" color="#4CC3D9"></a-box>
+      -->
+
+      <!-- #7 Light Source
+      <script src="https://unpkg.com/aframe-animation-component@%5E3.2.x/dist/aframe-animation-component.min.js"></script>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 0.2" material="shader: flat" light="type: point; color: #FFF" position="-4 3 -4"
+               animation="property: position; to: 4 2.8 -4; dir: alternate; loop: true"></a-entity>
+      -->
+
+      <!-- #8 Particle System
+      https://www.npmjs.com/package/aframe-particle-system-component
+      <script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>  
+      <a-entity particle-system="preset: snow; particleCount: 10000"></a-entity>
+      -->
+
+      <!-- #9 Javascript & Interactions
+      <script src="main.js"></script>
+      https://aframe.io/examples/showcase/a-blast/
+      https://aframe.io/aframe-school/#/12
+      -->
+
+      <!-- #10 Other Links
+        Exploring Worlds: https://aframe-school-gltf-model.glitch.me/solution2.html
+        Games: https://hacks.mozilla.org/2018/03/immersive-aframe-low-poly/
+      -->
